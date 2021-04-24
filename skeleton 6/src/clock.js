@@ -45,7 +45,7 @@ class Clock {
 
 let clockElement = document.querySelector("#clock");
 let clock = new Clock();
-
+htmlGenerator(clock.printTime(),clockElement);
 setInterval(() => {
   htmlGenerator(clock.tick.bind(clock)(),clockElement);
 },1000);

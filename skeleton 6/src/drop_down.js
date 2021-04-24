@@ -18,7 +18,8 @@ function dogLinkCreator() {
     a.href = dogs[key];
     let li = document.createElement('li');
     li.appendChild(a);
-    li.className = "dog-link"; 
+    li.className = "dog-link";
+    li.classList += " hidden";
     dogLinks.push(li); 
   } 
   return dogLinks;
@@ -33,5 +34,26 @@ function attachDogLinks() {
   })
 }
 
-attachDogLinks(); 
+attachDogLinks();
+
+let dropDown = document.querySelector(".drop-down-dog-nav");
+
+function handleEnter() {
+  let dropDowns = document.querySelectorAll(".hidden");
+  let dropDownsArr = Array.from(dropDowns);
+  dropDownsArr.forEach(li => {
+    li.classList.remove("hidden");
+  });
+}
+
+function handleLeave() {
+  let dropDowns = document.querySelectorAll(".dog-link");
+  let dropDownsArr = Array.from(dropDowns);
+  dropDownsArr.forEach(li => {
+    li.classList += " hidden";
+  });
+}
+
+dropDown.addEventListener("mouseenter", handleEnter);
+dropDown.addEventListener("mouseleave", handleLeave);
 

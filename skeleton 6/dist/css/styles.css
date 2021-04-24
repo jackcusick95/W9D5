@@ -6,20 +6,23 @@ html {
 }
 
 h1 {
-  color: #F0F2EF;
-  font-family: 'helvetica neue';
-  font-size: 20px;
-  font-weight: 200;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  background-color: #DDD;
+  padding: 10px;
+  border-radius: 7px;
 }
 
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .welcome {
   font-weight: 400;
-  margin-top: 100px;
 }
 
 /*  Phase 4: Slide In & Out Classes */
@@ -50,4 +53,53 @@ h1 {
 .slide.active {
   opacity: 1;
   transform: translateX(0%) scale(1);
+}
+
+.hidden {
+  display: none;
+}
+
+.drop-down-dog-nav {
+  background-color: #DDD;
+  height: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+}
+
+.drop-down-dog-list {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: 5px;
+}
+
+.dog-link {
+  
+  background-color: rgba(240,240,240,1);
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #83aa90;
+}
+
+.dog-link > a {
+  text-decoration: none;
+  color: black;
+}
+
+#party { 
+  
+
+}
+
+.welcome {
+}
+
+#clock {
+  font-size: 36px;
+  background-color: #DDD;
+  padding: 10px;
+  border-radius: 10px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 800;
 }
